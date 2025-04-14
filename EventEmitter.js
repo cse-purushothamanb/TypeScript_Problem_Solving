@@ -33,3 +33,10 @@ eventEmitter.setMaxListeners(20) //The value can be set to Infinity (or 0) to in
 console.log("Event Maximum Listeners after setting it to 20 for the Event Emitter: ", eventEmitter.getMaxListeners())
 console.log("Listeners Count of start event: ",eventEmitter.listenerCount('start')) //Only the .on() listener remains.
 console.log("Raw Listeners: ",eventEmitter.rawListeners('start')[0].toString())
+
+//Example:
+// Let’s say you have modules for billing, email, and inventory. You emit an event when an order is placed, and each module listens and handles its part.
+// orderSystem.emit('orderPlaced', orderDetails);
+// billing.on('orderPlaced', chargeCustomer);
+// email.on('orderPlaced', sendConfirmationEmail);
+// inventory.on('orderPlaced', updateStock);
