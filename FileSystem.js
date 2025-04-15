@@ -17,7 +17,7 @@ const message = process.argv[process.argv.length-1]
 
 if (!fs.existsSync('./entries')) {
   fs.mkdirSync('./entries');
-  console.log("📁 'entries' folder created.");
+  console.log("'entries' folder created.");
 }
 
 switch (command) {
